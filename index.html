@@ -27,13 +27,27 @@
     .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
     .topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 176px;
+      height: 56px;
+      flex: 0 0 176px;
+      overflow: hidden;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
     .brand-mark img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-    .brand-mark { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: linear-gradient(135deg, var(--purple), var(--blue)); color: #fff; font-weight: 900; font-size: 17px; letter-spacing: -1px; box-shadow: 0 8px 24px #8655f640; }
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left center;
+    }
+    .brand > span:last-child { display: none; }
+    .brand-mark { display: flex; align-items: center; justify-content: center; width: 176px; height: 56px; flex: 0 0 176px; overflow: hidden; border-radius: 0; background: transparent; box-shadow: none; }
     .brand-name { font-weight: 850; letter-spacing: .12em; font-size: 19px; line-height: 1.1; }
     .brand-sub { display: block; color: var(--muted); font-size: 10px; font-weight: 650; letter-spacing: .12em; margin-top: 5px; }
     .nav { display: flex; align-items: center; gap: 26px; }
@@ -62,7 +76,8 @@
     .orbit-ring { position: absolute; width: 148px; height: 148px; border: 1px solid #a990ff4a; border-radius: 50%; }
     .orbit-ring::before, .orbit-ring::after { content: ""; position: absolute; border: 1px solid #75baff38; border-radius: 50%; inset: 15px; }
     .orbit-ring::after { inset: 32px; }
-    .orbit-core { position: relative; z-index: 1; width: 80px; height: 80px; display: grid; place-items: center; border-radius: 25px; background: linear-gradient(140deg, #9b68ff, #438dff); box-shadow: 0 0 45px #7b6cff5c; color: white; font-size: 23px; font-weight: 900; letter-spacing: -.06em; transform: rotate(-7deg); }
+    .orbit-core { position: relative; z-index: 1; width: 80px; height: 80px; display: grid; place-items: center; overflow: hidden; border-radius: 25px; background: #fff; box-shadow: 0 0 45px #7b6cff5c; transform: rotate(-7deg); }
+    .orbit-core img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: inherit; transform: rotate(7deg); }
     .orbit-chip { position: absolute; display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid #ffffff25; background: #ffffff13; border-radius: 12px; font-size: 17px; }
     .chip-a { top: 14px; left: 57px; } .chip-b { right: 42px; top: 44px; } .chip-c { bottom: 14px; right: 70px; } .chip-d { left: 34px; bottom: 36px; }
     .mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
@@ -128,7 +143,7 @@
     @media (max-width: 560px) {
       .container { width: min(100% - 28px, 1120px); }
       .topbar { padding: 16px 0; }
-      .brand-mark { width: 40px; height: 40px; }
+      .brand-mark { width: 142px; height: 46px; flex-basis: 142px; }
       .brand-name { font-size: 17px; }
       .nav .button { padding: 10px 12px; font-size: 12px; }
       .hero { padding: 55px 0 56px; }
@@ -174,9 +189,7 @@
           <div class="visual-top"><span class="visual-label">THE NEXT CHAPTER STARTS HERE</span><span class="live-pill">OPEN CALL</span></div>
           <div class="visual-title">Think together.<br><span class="gradient-text">Build what's next.</span></div>
           <div class="visual-desc">Different strengths. Shared curiosity. One team.</div>
-          <div class="orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-core"><span class="brand-mark">
-  <img src="Tefula.jpg" alt="TEFULA logo">
-</span></div><span class="orbit-chip chip-a">⌘</span><span class="orbit-chip chip-b">✦</span><span class="orbit-chip chip-c">⌁</span><span class="orbit-chip chip-d">◈</span></div>
+          <div class="orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-core"><img src="Tefula.jpg" alt="TEFULA logo"></div><span class="orbit-chip chip-a">⌘</span><span class="orbit-chip chip-b">✦</span><span class="orbit-chip chip-c">⌁</span><span class="orbit-chip chip-d">◈</span></div>
           <div class="mini-stats"><div class="mini-stat"><strong>Learn & grow</strong><span>Keep building your skills</span></div><div class="mini-stat"><strong>Create impact</strong><span>Turn ideas into projects</span></div></div>
         </aside>
       </div>
