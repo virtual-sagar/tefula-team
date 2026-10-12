@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#130b2c">
+  <meta name="description" content="Apply to express interest in joining the TEFULA team.">
+  <title>Apply to Join TEFULA | Techno Fusion Labs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="apply-page">
+  <main class="app-root">
+    <section class="apply-section" id="apply">
+      <div class="container apply-layout">
+        <div class="apply-intro">
+          <div class="section-kicker">Your next step</div>
+          <h2>Let’s get to know you.</h2>
+          <p>Tell us a little about yourself, what you enjoy, and how you’d like to contribute. This is an expression of interest, not a promise of employment or paid work.</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">01</span><div><strong>Share your details</strong><span>Tell us who you are and how to contact you.</span></div></div>
+            <div class="step"><span class="step-num">02</span><div><strong>Choose your interests</strong><span>Pick the areas you’d love to explore.</span></div></div>
+            <div class="step"><span class="step-num">03</span><div><strong>We’ll follow up</strong><span>Our team can review your interest and reach out.</span></div></div>
+          </div>
+        </div>
+        <div class="form-card">
+          <div class="section-kicker">Official application</div>
+          <h3>Take the first step with TEFULA.</h3>
+          <p class="form-sub">A few details to help us understand your interests.</p>
+          <form class="application-form" id="tefula-application">
+            <div class="field"><label for="app-name">Full Name :</label><input id="app-name" name="fullName" autocomplete="name" required></div>
+            <div class="field"><label for="app-email">Email address*</label><input id="app-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="app-phone">Whatapps/Phone*</label><input id="app-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="app-city">City / Country*</label><input id="app-city" name="cityCountry" required></div>
+            <div class="field"><label for="app-status">Current Status*</label><select id="app-status" name="currentStatus" required><option value="">Select an option</option><option>College Student</option><option>School Student</option><option>Working Professional</option><option>Freelancer</option><option>Self Learner/other</option></select></div>
+            <div class="field full"><div class="section-kicker">2. Skills and interests</div></div>
+            <fieldset class="field full checkbox-field" aria-describedby="area-hint">
+              <legend>Which area would you like to join?&nbsp;*</legend>
+              <div class="checkbox-grid">
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="Software/Web Development"><span>Software/Web Development</span></label>
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="AI/ML"><span>AI/ML</span></label>
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="Cybersecurity"><span>Cybersecurity</span></label>
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="UI/UX &amp; Graphic Design"><span>UI/UX &amp; Graphic Design</span></label>
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="Content Creation &amp; Social Media"><span>Content Creation &amp; Social Media</span></label>
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="Marketing &amp; Business Development"><span>Marketing &amp; Business Development</span></label>
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="Research &amp; Innovation"><span>Research &amp; Innovation</span></label>
+                <label class="choice"><input type="checkbox" name="preferredTeam" value="Other:"><span>Other:</span></label>
+              </div>
+              <span class="field-hint" id="area-hint">Select one or more areas.</span>
+            </fieldset>
+            <div class="field full"><label for="app-skills">What skills do you currently have? **</label><textarea id="app-skills" name="skills" required></textarea></div>
+            <div class="field full"><label for="app-experience">Do you have any previous project or work experience?*</label><select id="app-experience" name="experience" required><option value="">Select an option</option><option>Yes, I have experience</option><option>I have personal or academic projects</option><option>I am a beginner and eager to learn.</option></select></div>
+            <fieldset class="field full profile-links" id="profile-links">
+              <legend>Portfolio, GitHub, LinkedIn or other profile link*</legend>
+              <p class="field-hint">Add any one, two, or all three links. At least one is required.</p>
+              <div class="field"><label for="app-portfolio">Portfolio / personal website</label><input id="app-portfolio" name="portfolio" type="text" inputmode="url" placeholder="example.com or https://example.com"></div>
+              <div class="field"><label for="app-github">GitHub profile</label><input id="app-github" name="github" type="text" inputmode="url" placeholder="github.com/username"></div>
+              <div class="field"><label for="app-linkedin">LinkedIn profile</label><input id="app-linkedin" name="linkedin" type="text" inputmode="url" placeholder="linkedin.com/in/username"></div>
+            </fieldset>
+            <div class="field full"><label for="app-motivation">Why do you want to join TEFULA?*</label><textarea id="app-motivation" name="motivation" required></textarea></div>
+            <div class="field"><label for="app-availability">How much time can you contribute for TEFULA?*</label><select id="app-availability" name="availability" required><option value="">Select an option</option><option>1–3 hours</option><option>4–6 hours</option><option>6–10 hours</option><option>10+ hours</option></select></div>
+            <div class="field"><label for="app-collaboration">Are you willing to learn new skills and collaborate with a team?*</label><select id="app-collaboration" name="collaboration" required><option value="">Select an option</option><option>Yes</option><option>Maybe, depending on the role.</option></select></div>
+            <div class="field full"><label for="app-other">Anything else you want us to know?</label><textarea id="app-other" name="anythingElse"></textarea></div>
+            <div class="field full"><label class="consent"><input type="checkbox" name="consent" required><span>I confirm these details are accurate and agree that TEFULA may use them to review my team-interest application. *</span></label></div>
+            <div class="form-submit-row"><button class="button" type="submit" id="application-submit">Submit application <span aria-hidden="true">↗</span></button><span class="field-hint">Fields marked * are required.</span></div>
+            <div class="form-status" id="application-status" role="status" aria-live="polite"></div>
+          </form>
+          <p class="form-note">Submitting an application does not guarantee selection or paid work. Please do not include passwords, government ID numbers, or other sensitive information.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/apply.js"></script>
+</body>
+</html>
