@@ -1,258 +1,196 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="theme-color" content="#130b2c">
+
   <meta name="description" content="Join the TEFULA team. Share your skills, explore technology, and build something meaningful with Techno Fusion Labs.">
+
   <title>Join TEFULA | Techno Fusion Labs</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --page: light-dark(#f8f7ff, #0d0a19);
-      --surface: light-dark(#ffffff, #171224);
-      --surface-2: light-dark(#f0edff, #211834);
-      --text: light-dark(#21153b, #f7f3ff);
-      --muted: light-dark(#6c6380, #b8aecb);
-      --line: light-dark(#e4def3, #342746);
-      --purple: #8655f6;
-      --blue: #4c9eff;
-      --deep: #170d31;
-      --success: light-dark(#137b55, #68e2ae);
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--page); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
-    .app-root { min-height: 100vh; width: 100%; background: var(--page); border-radius: 0; overflow: hidden; }
-    .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    .topbar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
-    .brand-mark {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 176px;
-      height: 56px;
-      flex: 0 0 176px;
-      overflow: hidden;
-      border-radius: 0;
-      background: transparent;
-      box-shadow: none;
-    }
-    .brand-mark img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: left center;
-    }
-    .brand > span:last-child { display: none; }
-    .brand-mark { display: flex; align-items: center; justify-content: center; width: 176px; height: 56px; flex: 0 0 176px; overflow: hidden; border-radius: 0; background: transparent; box-shadow: none; }
-    .brand-name { font-weight: 850; letter-spacing: .12em; font-size: 19px; line-height: 1.1; }
-    .brand-sub { display: block; color: var(--muted); font-size: 10px; font-weight: 650; letter-spacing: .12em; margin-top: 5px; }
-    .nav { display: flex; align-items: center; gap: 26px; }
-    .nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 650; }
-    .nav a:hover { color: var(--purple); }
-    .button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; border: 0; border-radius: 12px; padding: 13px 19px; color: #fff; font: inherit; font-size: 14px; font-weight: 750; text-decoration: none; cursor: pointer; background: linear-gradient(110deg, var(--purple), #5d83ff); box-shadow: 0 10px 24px #8655f62b; transition: transform .18s ease, box-shadow .18s ease; }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 14px 28px #8655f640; }
-    .button-outline { background: transparent; border: 1px solid #ffffff5a; box-shadow: none; }
-    .hero { position: relative; isolation: isolate; overflow: hidden; padding: 72px 0 76px; color: #fff; background: radial-gradient(ellipse at 78% 20%, #4c69e65c, transparent 34%), radial-gradient(ellipse at 15% 100%, #9b4dff45, transparent 38%), linear-gradient(135deg, #170d31, #21104b 55%, #102b59); }
-    .hero::after { content: ""; position: absolute; z-index: -1; width: 440px; height: 440px; border: 1px solid #ffffff16; border-radius: 50%; right: -100px; top: -180px; box-shadow: 0 0 0 45px #ffffff08, 0 0 0 90px #ffffff05; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 54px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #ffffff2b; background: #ffffff0d; border-radius: 999px; padding: 7px 12px; color: #ddd1ff; font-size: 12px; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
-    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #8be9c1; box-shadow: 0 0 0 4px #8be9c11d; }
-    h1 { margin: 22px 0 18px; max-width: 690px; font-size: clamp(42px, 5.7vw, 68px); line-height: 1.06; letter-spacing: -.055em; }
-    .gradient-text { background: linear-gradient(100deg, #c5a8ff 5%, #75c3ff 90%); color: transparent; background-clip: text; -webkit-background-clip: text; }
-    .hero-copy { max-width: 570px; color: #d2c8e9; font-size: 17px; line-height: 1.8; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .hero-note { color: #bdb0d8; font-size: 12px; margin-top: 18px; }
-    .visual-card { position: relative; border: 1px solid #ffffff27; background: linear-gradient(145deg, #ffffff15, #ffffff06); border-radius: 26px; padding: 25px; box-shadow: 0 24px 70px #00000026; backdrop-filter: blur(8px); }
-    .visual-top { display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid #ffffff20; }
-    .visual-label { color: #c9bce4; font-size: 12px; font-weight: 700; }
-    .live-pill { border-radius: 99px; padding: 5px 9px; background: #8be9c11b; color: #9af1ca; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
-    .visual-title { font-size: 26px; font-weight: 800; line-height: 1.2; margin: 23px 0 7px; }
-    .visual-desc { color: #c5badb; font-size: 13px; }
-    .orbit { position: relative; height: 174px; display: grid; place-items: center; margin: 16px 0 10px; }
-    .orbit-ring { position: absolute; width: 148px; height: 148px; border: 1px solid #a990ff4a; border-radius: 50%; }
-    .orbit-ring::before, .orbit-ring::after { content: ""; position: absolute; border: 1px solid #75baff38; border-radius: 50%; inset: 15px; }
-    .orbit-ring::after { inset: 32px; }
-    .orbit-core { position: relative; z-index: 1; width: 80px; height: 80px; display: grid; place-items: center; overflow: hidden; border-radius: 25px; background: #fff; box-shadow: 0 0 45px #7b6cff5c; transform: rotate(-7deg); }
-    .orbit-core img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: inherit; transform: rotate(7deg); }
-    .orbit-chip { position: absolute; display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid #ffffff25; background: #ffffff13; border-radius: 12px; font-size: 17px; }
-    .chip-a { top: 14px; left: 57px; } .chip-b { right: 42px; top: 44px; } .chip-c { bottom: 14px; right: 70px; } .chip-d { left: 34px; bottom: 36px; }
-    .mini-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-    .mini-stat { padding: 13px; background: #ffffff0b; border: 1px solid #ffffff12; border-radius: 14px; }
-    .mini-stat strong { display: block; font-size: 15px; }
-    .mini-stat span { color: #bfb3d6; font-size: 11px; }
-    section { padding: 76px 0; }
-    .section-head { max-width: 660px; margin: 0 auto 36px; text-align: center; }
-    .section-kicker { color: var(--purple); font-size: 12px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
-    h2 { margin: 10px 0 12px; font-size: clamp(29px, 4vw, 42px); line-height: 1.15; letter-spacing: -.04em; }
-    .section-head p { margin: 0; color: var(--muted); }
-    .roles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .role { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); transition: transform .18s ease, border-color .18s ease; }
-    .role:hover { transform: translateY(-3px); border-color: #a98bf6; }
-    .role-icon { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 13px; background: var(--surface-2); font-size: 21px; margin-bottom: 15px; }
-    .role h3 { margin: 0 0 6px; font-size: 16px; }
-    .role p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
-    .why { background: var(--surface-2); }
-    .why-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: center; }
-    .why-copy p { color: var(--muted); }
-    .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .principle { padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
-    .principle strong { display: block; margin: 8px 0 4px; }
-    .principle span { color: var(--muted); font-size: 13px; }
-    .principle-icon { font-size: 22px; }
-    .apply-section { background: radial-gradient(ellipse at 0% 0%, #8a5cf51a, transparent 42%), var(--page); }
-    .apply-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 42px; align-items: start; }
-    .apply-intro { position: sticky; top: 20px; }
-    .apply-intro p { color: var(--muted); }
-    .steps { display: grid; gap: 15px; margin-top: 25px; }
-    .step { display: flex; align-items: flex-start; gap: 12px; }
-    .step-num { flex: 0 0 30px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 10px; color: #fff; background: linear-gradient(135deg, var(--purple), var(--blue)); font-size: 12px; font-weight: 800; }
-    .step strong { display: block; font-size: 13px; }
-    .step span { color: var(--muted); font-size: 12px; }
-    .form-card { border: 1px solid var(--line); border-radius: 24px; background: var(--surface); padding: clamp(22px, 4vw, 36px); box-shadow: 0 18px 60px #2c18520b; }
-    .form-card h3 { margin: 0 0 8px; font-size: 25px; }
-    .form-sub { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
-    .apply-benefits { display: grid; gap: 12px; margin: 22px 0 26px; }
-    .apply-benefit { display: flex; align-items: flex-start; gap: 11px; color: var(--muted); font-size: 13px; }
-    .apply-benefit span:first-child { display: grid; place-items: center; flex: 0 0 28px; height: 28px; border-radius: 9px; background: var(--surface-2); color: var(--purple); font-weight: 850; }
-    .apply-benefit strong { display: block; color: var(--text); font-size: 13px; }
-    .apply-link { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
-    .apply-link .button { min-height: 48px; }
-    .form-note { color: var(--muted); font-size: 11px; margin-top: 17px; }
-    .privacy { margin-top: 15px; color: var(--muted); font-size: 11px; }
-    .footer { padding: 28px 0; color: #c5badb; background: #130b27; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .footer .brand-name { color: #fff; }
-    .footer p { margin: 6px 0 0; color: #9c90b3; font-size: 11px; }
-    .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
-    .footer-links a { color: #d5c9ef; font-size: 12px; text-decoration: none; }
-    .copyright { color: #85799d; font-size: 10px; text-align: center; padding-top: 20px; margin-top: 22px; border-top: 1px solid #ffffff18; }
-    @media (max-width: 850px) {
-      .hero-grid, .why-grid, .apply-layout { grid-template-columns: 1fr; }
-      .hero-grid { gap: 35px; }
-      .visual-card { max-width: 480px; }
-      .roles-grid { grid-template-columns: repeat(2, 1fr); }
-      .why-grid { gap: 28px; }
-      .apply-intro { position: static; }
-      .nav { gap: 14px; }
-      .nav a:not(.button) { display: none; }
-    }
-    @media (max-width: 560px) {
-      .container { width: min(100% - 28px, 1120px); }
-      .topbar { padding: 16px 0; }
-      .brand-mark { width: 142px; height: 46px; flex-basis: 142px; }
-      .brand-name { font-size: 17px; }
-      .nav .button { padding: 10px 12px; font-size: 12px; }
-      .hero { padding: 55px 0 56px; }
-      .hero-copy { font-size: 15px; }
-      .hero-actions .button { width: 100%; }
-      section { padding: 56px 0; }
-      .roles-grid, .principles { grid-template-columns: 1fr; }
-      .form-card { border-radius: 18px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
-  </style>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
+
 <body>
+
   <main class="app-root">
+
     <header class="container topbar">
+
       <a class="brand" href="#home" aria-label="TEFULA home">
+
         <span class="brand-mark">
-  <img src="Tefula.jpg" alt="TEFULA logo">
+
+  <img src="assets/Tefula.jpg" alt="TEFULA logo">
+
 </span>
+
         <span><span class="brand-name">TEFULA</span><span class="brand-sub">TECHNO FUSION LABS</span></span>
+
       </a>
+
       <nav class="nav" aria-label="Main navigation">
+
         <a href="#opportunities">Opportunities</a>
+
         <a href="#about">Why TEFULA</a>
-        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeCbM3B4vDZkcooGGWHrFZFBrpMyhZtoGeM1rNVT6KJEGO2mg/viewform" target="_blank" rel="noopener noreferrer">Join the team <span aria-hidden="true">↗</span></a>
+
+        <a class="button" href="#apply-overview">Join the team <span aria-hidden="true">↗</span></a>
+
       </nav>
+
     </header>
 
+
+
     <section class="hero" id="home">
+
       <div class="container hero-grid">
+
         <div>
+
           <div class="eyebrow"><span class="eyebrow-dot"></span> Team interest is open</div>
+
           <h1>Big ideas need <span class="gradient-text">great people.</span></h1>
+
           <p class="hero-copy">Have a curious mind, a creative spark, or a passion for technology? Join the TEFULA journey and help turn ideas into real projects — one step, one skill, one breakthrough at a time.</p>
+
           <div class="hero-actions">
-            <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeCbM3B4vDZkcooGGWHrFZFBrpMyhZtoGeM1rNVT6KJEGO2mg/viewform" target="_blank" rel="noopener noreferrer">I’m interested <span aria-hidden="true">→</span></a>
+
+            <a class="button" href="#apply-overview">I’m interested <span aria-hidden="true">→</span></a>
+
             <a class="button button-outline" href="#opportunities">Explore opportunities</a>
+
           </div>
+
           <p class="hero-note">For learners, creators, builders, and people who want to grow together.</p>
+
         </div>
+
         <aside class="visual-card" aria-label="TEFULA team illustration">
+
           <div class="visual-top"><span class="visual-label">THE NEXT CHAPTER STARTS HERE</span><span class="live-pill">OPEN CALL</span></div>
+
           <div class="visual-title">Think together.<br><span class="gradient-text">Build what's next.</span></div>
+
           <div class="visual-desc">Different strengths. Shared curiosity. One team.</div>
-          <div class="orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-core"><img src="Tefula.jpg" alt="TEFULA logo"></div><span class="orbit-chip chip-a">⌘</span><span class="orbit-chip chip-b">✦</span><span class="orbit-chip chip-c">⌁</span><span class="orbit-chip chip-d">◈</span></div>
+
+          <div class="orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-core"><img src="assets/Tefula.jpg" alt="TEFULA logo"></div><span class="orbit-chip chip-a">⌘</span><span class="orbit-chip chip-b">✦</span><span class="orbit-chip chip-c">⌁</span><span class="orbit-chip chip-d">◈</span></div>
+
           <div class="mini-stats"><div class="mini-stat"><strong>Learn & grow</strong><span>Keep building your skills</span></div><div class="mini-stat"><strong>Create impact</strong><span>Turn ideas into projects</span></div></div>
+
         </aside>
+
       </div>
+
     </section>
+
+
 
     <section id="opportunities">
+
       <div class="container">
+
         <div class="section-head"><div class="section-kicker">Find your place</div><h2>Bring your talent. Find your team.</h2><p>Choose an area that excites you. You don’t need to know everything already — curiosity and commitment matter.</p></div>
+
         <div class="roles-grid">
+
           <article class="role"><div class="role-icon">💻</div><h3>Web & Software</h3><p>Build websites, apps, tools, and useful digital experiences.</p></article>
+
           <article class="role"><div class="role-icon">🤖</div><h3>AI & Data</h3><p>Explore AI, machine learning, automation, and data-driven ideas.</p></article>
+
           <article class="role"><div class="role-icon">🛡️</div><h3>Cybersecurity</h3><p>Learn about safer systems, security concepts, and responsible testing.</p></article>
+
           <article class="role"><div class="role-icon">🎨</div><h3>Design & Creative</h3><p>Shape UI/UX, visual design, graphics, and brand experiences.</p></article>
+
           <article class="role"><div class="role-icon">📣</div><h3>Content & Community</h3><p>Create content, tell our story, and connect with the community.</p></article>
+
           <article class="role"><div class="role-icon">🚀</div><h3>Business & Ideas</h3><p>Research opportunities, plan projects, and help ideas move forward.</p></article>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <section class="why" id="about">
+
       <div class="container why-grid">
+
         <div class="why-copy"><div class="section-kicker">More than a title</div><h2>Build skills.<br>Build confidence.<br><span class="gradient-text">Build together.</span></h2><p>TEFULA is growing from an idea into a technology-focused journey. We value people who share knowledge, take initiative, stay curious, and help each other improve.</p><p><strong>Ready to Fuse Client through Tech.</strong></p></div>
+
         <div class="principles">
+
           <div class="principle"><div class="principle-icon">🧠</div><strong>Keep learning</strong><span>Beginners are welcome when they’re ready to learn.</span></div>
+
           <div class="principle"><div class="principle-icon">🤝</div><strong>Work as a team</strong><span>Respect, communication, and shared effort matter.</span></div>
+
           <div class="principle"><div class="principle-icon">🧪</div><strong>Try new ideas</strong><span>Experiment, create, and learn from the process.</span></div>
+
           <div class="principle"><div class="principle-icon">🌱</div><strong>Grow with purpose</strong><span>Make progress together, one project at a time.</span></div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="apply-section" id="apply">
-      <div class="container apply-layout">
-        <div class="apply-intro"><div class="section-kicker">Your next step</div><h2>Let’s get to know you.</h2><p>Tell us a little about yourself, what you enjoy, and how you’d like to contribute. This is an expression of interest, not a promise of employment or paid work.</p>
-          <div class="steps"><div class="step"><span class="step-num">01</span><div><strong>Share your details</strong><span>Tell us who you are and how to contact you.</span></div></div><div class="step"><span class="step-num">02</span><div><strong>Choose your interests</strong><span>Pick the areas you’d love to explore.</span></div></div><div class="step"><span class="step-num">03</span><div><strong>We’ll follow up</strong><span>Our team can review your interest and reach out.</span></div></div></div>
+
+
+
+
+
+
+    <section class="apply-overview" id="apply-overview">
+      <div class="container overview-grid">
+        <div class="overview-intro">
+          <a class="back-home" href="#home">← Back to TEFULA</a>
+          <div class="section-kicker">Your next step</div>
+          <h1>Let’s get to know you.</h1>
+          <p>Tell us a little about yourself, what you enjoy, and how you’d like to contribute. This is an expression of interest, not a promise of employment or paid work.</p>
+          <div class="overview-steps">
+            <div class="overview-step"><span class="step-num">01</span><div><strong>Share your details</strong><p>Tell us who you are and how to contact you.</p></div></div>
+            <div class="overview-step"><span class="step-num">02</span><div><strong>Choose your interests</strong><p>Pick the areas you’d love to explore.</p></div></div>
+            <div class="overview-step"><span class="step-num">03</span><div><strong>We’ll follow up</strong><p>Our team can review your interest and reach out.</p></div></div>
+          </div>
         </div>
-        <div class="form-card">
+        <div class="form-card overview-card">
           <div class="section-kicker">Official application</div>
-          <h3>Take the first step with TEFULA.</h3>
-          <p class="form-sub">Interested in joining Techno Fusion Labs? Fill in our official Google Form to tell us about yourself, your skills, and the areas where you’d like to contribute. Your submission is recorded in TEFULA’s linked response spreadsheet.</p>
-          <div class="apply-benefits">
-            <div class="apply-benefit"><span>01</span><div><strong>Personal details</strong>Provide your name, contact details, and current background.</div></div>
-            <div class="apply-benefit"><span>02</span><div><strong>Skills and interests</strong>Share your skills, portfolio or profile link, and preferred area to join.</div></div>
-            <div class="apply-benefit"><span>03</span><div><strong>Motivation and availability</strong>Tell us why you’re interested and how much time you can contribute.</div></div>
+          <h2>Take the first step with TEFULA.</h2>
+          <p class="lead">Interested in joining Techno Fusion Labs? Fill in our application to tell us about yourself, your skills, and the areas where you’d like to contribute. Your submission is designed to be recorded in TEFULA’s linked response spreadsheet.</p>
+          <div class="overview-benefits">
+            <div class="overview-benefit"><span class="step-num">01</span><div><strong>Personal details</strong><p>Provide your name, contact details, and current background.</p></div></div>
+            <div class="overview-benefit"><span class="step-num">02</span><div><strong>Skills and interests</strong><p>Share your skills, portfolio or profile links, and preferred area to join.</p></div></div>
+            <div class="overview-benefit"><span class="step-num">03</span><div><strong>Motivation and availability</strong><p>Tell us why you’re interested and how much time you can contribute.</p></div></div>
           </div>
-          <div class="apply-link">
-            <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSeCbM3B4vDZkcooGGWHrFZFBrpMyhZtoGeM1rNVT6KJEGO2mg/viewform?usp=sharing&amp;ouid=106396208130953371245" target="_blank" rel="noopener noreferrer">Apply to Join TEFULA <span aria-hidden="true">↗</span></a>
-            <span class="hint">Opens Google Forms in a new tab.</span>
-          </div>
-          <p class="form-note">Please provide accurate information and a profile or portfolio link if you have one. Your details will be used to review your interest in potential TEFULA team opportunities. Submitting this form does not guarantee selection or paid work.</p>
+          <div class="overview-cta"><a class="button" href="application.html">Apply to Join TEFULA <span aria-hidden="true">↗</span></a><span>Opens the application form.</span></div>
+          <p class="overview-note">Please provide accurate information and a profile or portfolio link if you have one. Your details will be used to review your interest in potential TEFULA team opportunities. Submitting this form does not guarantee selection or paid work.</p>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="container"><div class="footer-inner"><a class="brand" href="#home"><span class="brand-mark">
-  <img src="Tefula.jpg" alt="TEFULA logo">
-</span><span><span class="brand-name">TEFULA</span><span class="brand-sub">TECHNO FUSION LABS</span></span></a><div class="footer-links"><a href="#opportunities">Opportunities</a><a href="#about">Our values</a><a href="https://www.facebook.com/technofusionlabs" target="_blank" rel="noreferrer">Facebook ↗</a><a href="mailto:virtualtefula@gmail.com">Email TEFULA ↗</a></div></div><p>Ready to Fuse Client through Tech.</p><div class="copyright">© <span id="year"></span> TEFULA · Techno Fusion Labs</div></div>
-    </footer>
-  </main>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
 
+      <div class="container"><div class="footer-inner"><a class="brand" href="#home"><span class="brand-mark">
+
+  <img src="assets/Tefula.jpg" alt="TEFULA logo">
+
+</span><span><span class="brand-name">TEFULA</span><span class="brand-sub">TECHNO FUSION LABS</span></span></a><div class="footer-links"><a href="#opportunities">Opportunities</a><a href="#about">Our values</a><a href="https://www.facebook.com/technofusionlabs" target="_blank" rel="noreferrer">Facebook ↗</a><a href="mailto:virtualtefula@gmail.com">Email TEFULA ↗</a></div></div><p>Ready to Fuse Client through Tech.</p><div class="copyright">© <span id="year"></span> TEFULA · Techno Fusion Labs</div></div>
+
+    </footer>
+
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

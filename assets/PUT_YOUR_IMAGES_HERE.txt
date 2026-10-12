@@ -1,0 +1,5 @@
+Copy these existing image files from your current TEFULA folder into this assets folder:
+- Tefula.jpg
+- TEFULA Tech Fusion Signature Banner.png
+
+Keep the filenames exactly the same.
